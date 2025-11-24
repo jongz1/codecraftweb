@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a HTML</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="logo"><span>Code</span><span class="span2">Craft</span></div>
+        <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="seccss.html">CSS</a>
+                <a href="PaginaJavaScript.html">JavaScript</a>
+            <!-- <input class="search-bar" type="text" placeholder="Buscar cursos..."> -->
+        </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <h1>Introducción a HTML: La Estructura de la Web</h1>
+            <p>HTML, o HyperText Markup Language, es el lenguaje estándar utilizado para crear y diseñar páginas web.
+                Define la estructura del contenido web mediante un sistema de 'etiquetas' que envuelven diferentes
+                partes del contenido para que aparezcan o actúen de una determinada manera. Es el esqueleto fundamental
+                sobre el que se construyen todos los sitios web.</p>
+        </section>
+
+        <section class="conceptos">
+            <h2>Conceptos Fundamentales</h2>
+            <p>Para entender HTML, es crucial familiarizarse con tres conceptos básicos: etiquetas, que definen el tipo
+                de contenido; atributos, que proporcionan información adicional sobre las etiquetas; y elementos, que
+                son la combinación de una etiqueta de apertura, contenido y una etiqueta de cierre.</p>
+            <div class="code-example">
+                <p><strong>Ejemplo: Estructura básica de HTML</strong></p>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Mi Primera Página Web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hola, Mundo!&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+            </div>
+        </section>
+
+        <section class="elementos">
+            <h2>Lista de Elementos Básicos</h2>
+            <ul>
+                <li><strong>Etiquetas de Título (&lt;h1&gt; a &lt;h6&gt;):</strong> Se utilizan para definir
+                    encabezados, donde &lt;h1&gt; es el más importante.</li>
+                <li><strong>Párrafos (&lt;p&gt;):</strong> Usados para agrupar bloques de texto.</li>
+                <li><strong>Enlaces (&lt;a&gt;):</strong> Crean hipervínculos a otras páginas. El atributo href
+                    especifica la URL de destino.</li>
+                <li><strong>Imágenes (&lt;img&gt;):</strong> Incrustan imágenes en la página. Los atributos src (fuente)
+                    y alt (texto alternativo) son esenciales.</li>
+            </ul>
+            <div class="code-example">
+                <p><strong>Ejemplo: Combinando elementos</strong></p>
+                <pre>
+&lt;h1&gt;Mi Blog de Viajes&lt;/h1&gt;
+&lt;p&gt;Bienvenido a mi blog. Aquí comparto mis aventuras.&lt;/p&gt;
+&lt;img src="mountain.jpg" alt="Una montaña nevada al atardecer"&gt;
+&lt;p&gt;
+    Lee más sobre mis proyectos en &lt;a href="proyectos"&gt;esta página&lt;/a&gt;.
+&lt;/p&gt;
+                </pre>
+            </div>
+        </section>
+
+        <!--/////// SECCIÓN 1 ///////-->
+        <section class="Comandos">
+            <div class="Section-1">
+                <h2>1. Estructura básica y Doctype</h2>
+                <h3>&lt;!DOCTYPE html&gt;</h3>
+                <p>Es una instrucción que le dice al navegador que el documento está escrito en HTML5, la versión más
+                    moderna del estándar. Evita que el navegador entre en "modo compatible" (quirks mode), un modo
+                    antiguo que puede generar
+                    errores en estilos y estructura. No es una etiqueta; es una declaración que debe ir siempre en la
+                    primera línea del documento.</p>
+                <br>
+
+                <h3>&lt;html&gt;</h3>
+                <p>Es la etiqueta raíz que envuelve todo el contenido HTML. Define el idioma del documento mediante el
+                    atributo lang. Ejemplo: lang="es" indica que todo el contenido está en español.</p>
+                <p>Esto mejora: </p>
+                <ul>
+                    <li>Lectores de pantalla.</li>
+                    <li>Motores de búsqueda.</li>
+                    <li>Traducción automática.</li>
+                </ul>
+                <p>Puede contener atributos como: </p>
+                <ul>
+                    <li>dir="ltr" (orientación de texto izquierda a derecha)</li>
+                    <li>dir="rtl" (derecha a izquierda, usado en árabe o hebreo)</li>
+                </ul>
+                <br>
+
+                <h3>&lt;head&gt;</h3>
+                <p>Contiene metadatos, información técnica que no se muestra directamente.</p>
+                <p>Elementos comunes:</p>
+                <ul>
+                    <li>&lt;meta charset="UTF-8"&gt;: define la codificación universal para caracteres.</li>
+                    <li>&lt;title&gt;: texto de la pestaña del navegador.</li>
+                    <li>&lt;link&gt;: cargar CSS externo.</li>
+                    <li>&lt;meta name="desciption"&gt;: descripción para SEO.</li>
+                </ul>
+                <p>Todo lo que va en &lt;head&gt; ayuda a configurar el sitio, pero no se ve en pantalla.</p>
+                <br>
+
+                <h3>&lt;body&gt;</h3>
+                <p>Contiene todo el contenido visible del sitio:</p>
+                <li>textos, imágenes, tablas, botones, formularios, etc.</li>
+                <p>Es la capa que muestra la interfaz al usuario final.</p>
+                <p>Puede incluir atributos como:</p>
+                <ul>
+                    <li>onload (ejecutar acciones al cargar la página)</li>
+                    <li>class y id (para estilo y scripts)</li>
+                </ul>
+                <br>
+
+                <div class="code-example">
+                    <h3>Ejemplo:</h3>
+                    <pre>
+&lt;!DOCTYPE html&gt;
+    &lt;li&gt;head&lt;/li&gt;
+        &lt;meta charset ="UTF-8"&gt;
+        &lt;title&gt;Mi Página&lt;title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hola mundo&lt;h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                </div>
+            </div>
+            <br>
+            <!--/////// SECCIÓN 2 ///////-->
+            <div class="Section-2">
+                <h2>2. Etiquetas de texto y formato</h2>
+                <h3>Encabezados &lt;h1&gt; a &lt;h6&gt;</h3>
+                <p>Son etiquetas para definir títulos y subtítulos jerárquicos.
+                    &lt;h1&gt; es el título más importante; debe usarse solo una vez por página para SEO.
+                    Los demás (&lt;h2&gt;, &lt;h3&gt;, etc.) organizan el contenido como capítulos y subcapítulos.
+                    Ayudan a lectores de pantalla a navegar por la estructura del documento.
+                </p>
+                <br>
+
+                <h3>&lt;p&gt;</h3>
+                <p>Crea bloques de texto separados.
+                    Por defecto agrega un pequeño espacio arriba y abajo para mejorar la lectura.
+                    Es la unidad básica para texto largo.
+                </p>
+                <br>
+
+                <h3>&lt;strong&gt;</h3>
+                <p>Aporta importancia semántica.
+                    Lectores de pantalla suben el tono para indicar enfasis.
+                    Motores de búsqueda lo consideran texto importante.
+                </p>
+                <br>
+
+                <h3>&lt;b&gt;</h3>
+                <p>Solo cambia la apariencia del texto (negrita visual).
+                    No indica importancia ni tiene valor semántico.
+                </p>
+                <br>
+
+                <h3>&lt;em&gt;</h3>
+                <p>Indica énfasis semántico real (cambia la entonación en lectores de pantalla).
+                    Se usa para resaltar palabras o frases significativas.
+                </p>
+                <br>
+
+                <h3>&lt;i&gt;</h3>
+                <p>Solo muestra el texto en cursiva.
+                    Se usa para nombres científicos, palabras extranjeras, etc.
+                </p>
+                <br>
+
+                <div class="code-example">
+                    <h3>Ejemplo:</h3>
+                    <pre>
+&lt;h2&gt;Titulo importante&lt;/h2&gt;
+&lt;p&gt;Este es un  &lt;strong&gt; dato relevantee&lt;/strong&gt; y este es solo &lt;b&gt; texto en negrita &lt;/b&gt;.&lt;/p&gt;
+&lt;p&gt; Este texto tiene &lt;em&gt;enfasis real&lt;/em&gt; y este solo &lt;i&gt;está en cursiva&lt;/i&gt;
+
+                </pre>
+                </div>
+
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 3 ///////-->
+            <div class="Section-3">
+                <h2>3. Enlaces e hipervínculos</h2>
+                <h3>&lt;a&gt;</h3>
+                <p>Sirve para crear enlaces que permiten navegar a otras páginas o secciones.
+                    Es uno de los elementos fundamentales de la web.
+                </p>
+                <p>Atributo principal:</p>
+                <ul>
+                    <li>href → dirección del destino, que puede ser:</li>
+                    <ul>
+                        <li>URL externa (otro sitio)</li>
+                        <li>URL interna (archivo del mismo proyecto)</li>
+                    </ul>
+                    <p>Un fragmento del mismo documento usando #.</p>
+                </ul>
+                <p>Tipos de enlaces: </p>
+                <ul>
+                    <li>Externos: Conducen a otro sitio web.</li>
+                    <li>Internos: Apuntan a otras páginas dentro del mismo sitio.</li>
+                    <li>Fragmentos: Navegan a una sección específica, útil para páginas largas.</li>
+                </ul>
+                <br>
+
+                <h3>target="_blank"</h3>
+                <p>Abre el enlace en una nueva pestaña.
+                    Se usa para:
+                </p>
+                <ul>
+                    <li>Evitar salir del sitio actual</li>
+                    <li>Enlaces a sitios externosl</li>
+                </ul>
+                <p>Se recomienda añadir también rel="noopener" para seguridad.</p>
+                <br>
+
+                <div class="code-example">
+                    <h3>Ejemplo:</h3>
+                    <pre>
+&lt;!-- Enlace externo --&gt;
+&lt;a href="https://google.com" target="_blank"&gt;Ir a Google&lt;/a&gt;
+
+&lt;!-- Enlace interno --&gt;
+&lt;a href="contacto.html"&gt;Página de contacto&lt;/a&gt;
+
+&lt;!-- Enlace a sección --&gt;
+&lt;a href="#info"&gt;Ir a información&lt;/a&gt;
+
+&lt;p id="info"&gt;Esta es la sección de información.&lt;/p&gt;
+
+                </pre>
+                </div>
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 4 ///////-->
+            <div class="Section-4">
+                <h2>4. Imágenes y multimedia</h2>
+                <h3>Etiqueta &lt;img&gt;</h3>
+                <p>Inserta imágenes directamente en el documento.
+                    No tiene etiqueta de cierre porque es un elemento vacío.
+                    Atributos esenciales:
+                </p>
+                <ul>
+                    <li>src: ubicación de la imagen (ruta local o URL)</li>
+                    <li>alt: texto alternativo para describir la imagen</li>
+                </ul>
+                <p>Es imprescindible para:</p>
+                <ul>
+                    <li>Accesibilidad</li>
+                    <li>SEO</li>
+                    <li>Cuando la imagen no carga</li>
+                </ul>
+                <p>Atributos adicionales:</p>
+                <ul>
+                    <li>width / height: controlan tamaño.</li>
+                    <li>loading="lazy": carga diferida para mejorar rendimiento.</li>
+                </ul>
+                <br>
+
+                <h3>Importancia del atributo alt</h3>
+                <p>Los lectores de pantalla leen el texto alternativo.
+                    Permite entender el contenido sin ver la imagen.
+                    Ayuda a Google a indexar imágenes correctamente.
+                </p>
+                <br>
+
+                <h3>Etiqueta &lt;audio&gt;</h3>
+                <p>Permite agregar audio con controles de reproducción.
+                    Atributo común: controls para mostrar play/pausa/volumen.
+                </p>
+                <br>
+
+                <h3>Etiqueta &lt;video&gt;</h3>
+                <p>Permite reproducir videos, también con controls.
+                    Puede incluir:
+                </p>
+                <ul>
+                    <li>poster (imagen previa)</li>
+                    <li>autoplay (reproducción automática)</li>
+                    <li>loop (repetición)</li>
+                </ul>
+                <br>
+
+                <div class="code-example">
+                    <h3>Ejemplo:</h3>
+                    <pre>
+&lt;img src="foto.jpg" alt="Foto de un paisaje" width="300"&gt;
+
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+
+&lt;video controls width="400"&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+                </pre>
+                </div>
+            </div>
+            <br>
+            
+            <!--/////// SECCIÓN 5 ///////-->
+            <div class="Sectio-5">
+                <h2>5. Etiquetas Semánticas de Estructura (HTML5)</h2>
+                <h3>&lt;header&gt;</h3>
+                <p>Contiene la parte superior de la página:
+                    logo, título, menú principal.
+                    Puede aparecer dentro de un artículo o sección.
+                </p>
+                <br>
+
+                <h3>&lt;nav&gt;</h3>
+                <p>Contiene enlaces de navegación principal o secundaria.
+                    Mejora la accesibilidad:
+                <ul>
+                    <li>Los lectores de pantalla pueden saltar directo al menú.</li>
+                </ul>
+                </p>
+                <br>
+
+                <h3>&lt;main&gt;</h3>
+                <p>Representa el contenido principal de la página.
+                    Solo debe haber uno por documento.
+                    Los motores de búsqueda priorizan este contenido.
+                </p>
+                <br>
+
+                <h3>&lt;article&gt;</h3>
+                <p>Contenido independiente que tiene sentido por sí mismo.
+                    Usado para:
+                </p>
+                <ul>
+                    <li>blogs</li>
+                    <li>noticias</li>
+                    <li>publicaciones</li>
+                    <li>comentarios</li>
+                </ul>
+                <br>
+
+                <h3>&lt;section&gt;</h3>
+                <p>Bloque temático dentro de una página.
+                    Ayuda a dividir contenido en categorías claras.
+                </p>
+                <br>
+
+                <h3>&lt;aside&gt;</h3>
+                <p>Contenido complementario:</p>
+                <ul>
+                    <li>barras laterales</li>
+                    <li>anuncios</li>
+                    <li>enlaces sugeridos</li>
+                </ul>
+                <br>
+
+                <h3>&lt;footer&gt;</h3>
+                <p>Parte inferior del documento o sección.
+                    Incluye:
+                </p>
+                <ul>
+                    <li>derechos de autor</li>
+                    <li>enlaces secundarios</li>
+                    <li>contactos</li>
+                </ul>
+                <br>
+
+                <h3>¿Cómo ayudan al SEO y accesibilidad?</h3>
+                <p>Proveen significado al contenido.
+                    Los lectores de pantalla pueden navegar por regiones (main, nav, header).
+                    Google interpreta mejor qué contenido es importante.
+                    Mejoran la estructura general del documento.
+                </p>
+                <br>
+
+                <div class="code-example">
+                    <h3>Ejemplo:</h3>
+                    <pre>
+&lt;header&gt;
+    &lt;h1&gt;Mi blog&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+    &lt;a href="#inicio"&gt;Inicio&lt;/a&gt;
+    &lt;a href="#posts"&gt;Posts&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Título del artículo&lt;/h2&gt;
+        &lt;p&gt;Contenido del artículo...&lt;/p&gt;
+    &lt;/article&gt;
+
+    &lt;section&gt;
+        &lt;h3&gt;Sección adicional&lt;/h3&gt;
+        &lt;p&gt;Información de la sección.&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;
+    &lt;p&gt;Publicidad o enlaces recomendados&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;Todos los derechors de autor reservados&lt;/p&gt;
+&lt;/footer&gt;
+
+                </pre>
+                </div>
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 6 ///////-->
+            <div class="Section-6">
+                <h2>6. Lista HTML ordenada</h2>
+                <p>Una lista ordenada comienza con la &lt;ol&gt; etiqueta. Cada elemento de la lista comienza con la
+                    &lt;li&gt; etiqueta.</p>
+                <div class="code-example">
+                    <p><strong>Los elementos de la lista estarán marcados con números de forma predeterminada, Ejemplo:
+                        </strong></p>
+                    <pre>
+&lt;ol&gt;
+&lt;li&gt;coffe&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+                </div>
+                <h3> Lista HTML no ordenada</h3>
+                <p>Esta lista desordenada con la &lt;ul&gt; etiqueta. Cada elemento de la lista comienza con la
+                    &lt;li&gt; etiqueta.</p>
+                <div class="code-example">
+                    <p><strong>Los elementos de la lista se marcarán con viñetas (pequeños círculos negros) de forma
+                            predeterminada: </strong></p>
+                    <p>Ejemplo</p>
+                    <pre>
+&lt;ul&gt;
+&lt;li&gt;coffe&lt;/li&gt;
+&lt;li&gt;Milk&lt;/li&gt;
+&lt;li&gt;Tea&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+                </div>
+
+                <h3> Lista de descripciones HTML</h3>
+                <p>HTML también admite listas de descripción</p>
+                <p>Una lista de descripciones es una lista de términos, con una descripción de cada término.</p>
+                <div class="code-example">
+                    <p><strong>La &lt;dl&gt; etiqueta define la lista de descripciones, la &lt;dt&gt; etiqueta
+                            define el término (nombre) y la &lt;dd&gt; etiqueta describe cada término: </strong>
+                    </p>
+                    <p>Ejemplo:</p>
+                    <pre>
+&lt;dl&gt;
+&lt;dt&gt;coffe&lt;/dt&gt;
+&lt;dd&gt;Black hot drink&lt;/dd&gt;
+&lt;dt&gt;Milk&lt;/dt&gt;
+&lt;dd&gt;White cold drink&lt;/dd&gt;
+&lt;/dl&gt;
+                </pre>
+                </div>
+            </div>
+
+            <!--/////// SECCIÓN 7 ///////-->
+            <div class="Section-7">
+                <h2>7. Diferencia principal del &lt;div&gt; a &lt;span&gt;</h2>
+                <p>La diferencia principal es que &lt;div&gt; es un contenedor de bloque que ocupa todo el ancho
+                    disponible y crea saltos de línea antes y después, usándose para agrupar secciones grandes de
+                    contenido. En cambio, &lt;span&gt; es un contenedor en línea que solo ocupa el espacio necesario
+                    para su contenido y no altera el flujo del texto, ideal para aplicar estilos a fragmentos pequeños.
+                </p>
+                <br>
+
+                <h3>&lt;div&gt;(De bloque)</h3>
+                <p>Sirve para agrupar elementos en bloques más grandes, como un título y su párrafo, o para crear la
+                    estructura de una sección completa de la página.</p>
+                <br>
+
+                <h3>&lt;span&gt;(En línea)</h3>
+                <p>Se utiliza para agrupar o dar estilo a partes pequeñas de texto o elementos dentro de una misma
+                    línea, como una palabra específica dentro de un párrafo.</p>
+
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 8 ///////-->
+            <div class="Section-8">
+                <h2>8. Estructura de una tabla(&lt;table&gt;)</h2>
+                <h3>&lt;table&gt;</h3>
+                <p>Una tabla HTML (&lt;table&gt;) es un conjunto de celdas (&lt;td&gt; o &lt;th&gt;) organizadas en
+                    filas (&lt;tr&gt;) que a su vez se pueden organizar en grupos de filas (<&lt;thead&gt;,
+                        &lt;tbody&gt; o &lt;tfoot&gt;). Además, la tabla puede tener una leyenda (&lt;caption&gt;) y
+                        hacer referencia a las columnas (&lt;col&gt; y &lt;colspan&gt;).</p>
+                        <br>
+
+                        <div class="code-example">
+                            <h3>Ejemplo:</h3>
+                            <pre>
+&lt;table&gt;
+    &lt;caption&gt;Ejemplo de tabla&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+        &lt;th&gt;A&lt;/th&gt;
+        &lt;th&gt;B&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;1&lt;/th&gt;
+        &lt;td&gt;A1&lt;/td&gt;
+        &lt;td&gt;B1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;2&lt;/th&gt;
+        &lt;td&gt;A2&lt;/td&gt;
+        &lt;td&gt;B2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                </pre>
+                        </div>
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 9 ///////-->
+            <div class="Section-9">
+                <h2>9. Atributos genéricos</h2>
+                <p>Los atributos genéricos como id, class, style, title y data-* se aplican a casi cualquier etiqueta
+                    HTML para modificar su comportamiento, apariencia o almacenar datos personalizados. id proporciona
+                    un identificador único, class agrupa elementos para aplicar estilos, style permite CSS en línea,
+                    title muestra información al pasar el ratón y data-* guarda datos personalizados. </p>
+                <br>
+                <p>Algunos de estos atributos genéricos: </p>
+                <ul>
+                    <li>id: Especifica un identificador único para un solo elemento en el documento HTML.</li>
+                    <li>class: Agrupa varios elementos que comparten una clasificación. Es útil para aplicar estilos CSS
+                        a múltiples elementos a la vez.</li>
+                    <li>title: Proporciona un título o una descripción adicional para el elemento, que generalmente
+                        aparece como una pista o "tooltip" cuando el usuario pasa el cursor sobre él.</li>
+                    <li>data-*: Permite almacenar datos personalizados en el elemento HTML.</li>
+                </ul>
+            </div>
+            <br>
+
+            <!--/////// SECCIÓN 10 ///////-->
+            <div class="Section-10">
+                <h2>Etiquetas de formularios y entrada de datos</h2>
+                <p>. La etiqueta &lt;form&gt; crea un formulario en una página web, y las etiquetas como &lt;input&gt;,
+                    &lt;textarea&gt; y &lt;button&gt; se utilizan para la entrada de datos del usuario. Los atributos
+                    action y method del formulario son cruciales: action especifica la URL a la que se envían los datos
+                    y method define el método HTTP (como POST o GET) que se utilizará para el envío.</p>
+                <br>
+
+                <h3>&lt;form&gt;</h3>
+                <p>Define un formulario HTML para recopilar datos del usuario.</p>
+                <p>Atributos: </p>
+                <ul>
+                    <li>Define un formulario HTML para recopilar datos del usuario.</li>
+                    <li>method: El método HTTP para enviar los datos (usualmente post o get).</li>
+                </ul>
+                <br>
+
+                <h3>&lt;input&gt;</h3>
+                <p>Crea diferentes tipos de campos de entrada en función del atributo type.</p>
+                <p>Atributos: </p>
+                <ul>
+                    <li>text: Un campo de texto simple para la entrada de una sola línea.</li>
+                    <li>submit: Un botón que, al hacer clic, envía el formulario.</li>
+                    <li>checkbox: Una casilla de verificación que puede estar marcada o desmarcada para seleccionar
+                        opciones múltiples.</li>
+                    <li>radio: Un botón de opción. Solo se puede seleccionar una opción de un grupo de botones de radio
+                        con el mismo nombre.</li>
+                </ul>
+                <br>
+
+                <h3>&lt;textarea&gt;</h3>
+                <p>Crea un área de texto de varias líneas para que el usuario pueda introducir texto más extenso.</p>
+                <br>
+
+                <h3>&lt;button&gt;</h3>
+                <p>Define un botón. A diferencia del &lt;input type="submit"&gt;, puede tener contenido más complejo
+                    (como una imagen) y se puede usar para otras acciones además de enviar el formulario. </p>
+            </div>
+            <br>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+        <p>© 2024 CodeCraft. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+                <a href="#">Sobre nosotros</a>
+                <a href="#">Términos de servicio</a>
+                <a href="#">Política de privacidad</a>
+        </nav>
+        </div>
+    </footer>
+    <script src = "MascotaVirtual.js"></script>
+</body>
+</html>

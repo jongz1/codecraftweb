@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #1A1A1A;
+    background-color: #1E2A38;
+}
+
+header{
+    background-color: #BEC6ED;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav a {
+    color: #000;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+.logo {
+    font-size: 32px;
+    color: #2631ff;
+    margin: 10px;
+}
+
+.main-content {
+    margin: auto;
+    width: 90%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    width: 95%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #C7D3FF;
+    border-radius: 8px;
+}
+
+.recommendations {
+    width: 85%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #d6e67b;
+    border-radius: 8px;
+    color: #ff2626;
+    font-weight: bold;
+}
+
+.conceptos, .elementos, .Comandos, .que-es-css, .sintaxis, .propiedades, .category{
+    width: 85%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #C7D3FF;
+    border-radius: 8px;
+}
+
+.code-example {
+    background: #f3f3ff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0px;
+}
+
+section h2, h1 {
+    font-size: 28px;
+    color: #2575FC;
+    padding-left: 10px;
+}
+
+span {
+    color: #008F5A;
+}
+
+.span2 {
+    color: #003F66;
+}
+
+.footer, .footer-nav a {
+    color: #FFFFFF;
+}
+
+footer {
+    color: #FFFFFF;
+    text-align: center;
+}

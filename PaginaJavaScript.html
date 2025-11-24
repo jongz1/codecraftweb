@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía Completa de JavaScript para Manipulación del DOM</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="logo"><span>Code</span><span class="span2">Craft</span></div>
+        <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="sechtml-1.html">HTML</a>
+                <a href="seccss.html">CSS</a>
+        </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <h1>Guía Completa de JavaScript para Manipulación del DOM</h1>
+    
+            <p>JavaScript es un lenguaje de programación interpretado que se utiliza principalmente para crear interactividad en páginas web. Es un componente fundamental del desarrollo web junto con HTML y CSS, permitiendo crear experiencias dinámicas y responsivas para los usuarios. A diferencia de HTML que estructura el contenido y CSS que lo estiliza, JavaScript permite modificar ambos en tiempo real basándose en las acciones del usuario u otros eventos.</p>
+            
+            <p>La importancia de JavaScript radica en su capacidad para transformar páginas web estáticas en aplicaciones interactivas completas. Desde validar formularios y crear animaciones hasta desarrollar aplicaciones web complejas de una sola página (SPA), JavaScript se ha convertido en un pilar del desarrollo web moderno. Su versatilidad y compatibilidad con todos los navegadores principales lo han posicionado como uno de los lenguajes de programación más utilizados en el mundo.</p>
+        </section>
+        
+        <section class="recommendations">
+            <p>Al utilizar JavaScript para manipulación visual del DOM, es recomendable seguir las mejores prácticas de desarrollo. Esto incluye separar la lógica de presentación del contenido, utilizar selectores eficientes para mejorar el rendimiento, y manipular clases CSS en lugar de estilos en línea cuando sea posible para mantener un código más limpio y mantenible.</p>
+            
+            <p>Otra recomendación importante es considerar la accesibilidad y experiencia de usuario al implementar cambios visuales. Las animaciones deben ser sutiles y no interferir con la usabilidad, los cambios de contenido deben ser claros para todos los usuarios, y es crucial probar las implementaciones en diferentes dispositivos y navegadores para garantizar una experiencia consistente.</p>
+        </section>
+        
+        <!-- Selección de Elementos -->
+        <section class="category">
+            <h2>Selección de Elementos del DOM</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>document.querySelector()</h4>
+                    <p>Este método permite seleccionar el primer elemento que coincida con un selector CSS especificado. Es extremadamente versátil ya que puede utilizar cualquier selector CSS válido, incluyendo clases, IDs, atributos o pseudo-clases. Retorna el primer elemento que encuentra en el documento que coincide con el selector proporcionado.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="uniqueElement">Único</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>document.querySelectorAll()</h4>
+                    <p>Similar a querySelector, pero retorna una NodeList con todos los elementos que coinciden con el selector CSS especificado. Esta NodeList es una colección estática de elementos que puede iterarse para aplicar cambios a múltiples elementos simultáneamente. Es especialmente útil para modificar grupos de elementos con la misma clase o etiqueta.</p>
+                    <div class="visual-example">
+                        <div class="example-element same-class">1</div>
+                        <div class="example-element same-class">2</div>
+                        <div class="example-element same-class">3</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>document.getElementById()</h4>
+                    <p>Un método clásico y eficiente para seleccionar elementos por su ID único. Es uno de los métodos de selección más rápidos ya que los IDs deben ser únicos en el documento. A diferencia de querySelector, solo acepta IDs sin el símbolo # y retorna directamente el elemento o null si no se encuentra ningún elemento con ese ID.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="specialBox">Especial</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Manipulación de Estilos -->
+        <section class="category">
+            <h2>Manipulación de Estilos</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>element.style</h4>
+                    <p>Proporciona acceso directo para modificar los estilos en línea de un elemento. Cada propiedad CSS puede ser accedida y modificada usando la notación camelCase (por ejemplo, backgroundColor en lugar de background-color). Los cambios aplicados mediante esta propiedad tienen alta especificidad y sobrescriben estilos definidos en hojas CSS externas.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="styledBox">Estilizado</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.style.transform</h4>
+                    <p>Permite aplicar transformaciones 2D y 3D a elementos, incluyendo rotación, escala, traslación y sesgado. Estas transformaciones no afectan el layout de los elementos circundantes, lo que las hace ideales para animaciones y efectos visuales. Se pueden combinar múltiples transformaciones en una sola declaración para crear efectos complejos.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="transformedBox">Transformado</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.style.transition</h4>
+                    <p>Define cómo los cambios en las propiedades CSS deben animarse suavemente durante un período de tiempo específico. Permite controlar la propiedad a animar, la duración, el tipo de aceleración y el retardo antes de que comience la transición. Es esencial para crear interfaces fluidas y agradables para el usuario.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="transitionBox">Transición</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.style.backgroundColor</h4>
+                    <p>Modifica el color de fondo de un elemento, aceptando valores en diferentes formatos como nombres de color, hexadecimal, RGB, RGBA, HSL o HSLA. Esta propiedad es fundamental para crear contrastes visuales, resaltar elementos importantes o crear esquemas de color dinámicos que respondan a la interacción del usuario.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="coloredBox">Color</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.style.borderRadius</h4>
+                    <p>Controla el redondeo de las esquinas de un elemento, permitiendo desde esquinas ligeramente redondeadas hasta formas completamente circulares. Se puede especificar un valor único para todas las esquinas o valores individuales para cada esquina. Esta propiedad es clave en el diseño moderno para crear interfaces más suaves y amigables.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="roundedBox">Redondeado</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.style.boxShadow</h4>
+                    <p>Aplica una o múltiples sombras a la caja de un elemento, creando efectos de profundidad y dimensión. Cada sombra puede definirse con valores de desplazamiento horizontal y vertical, desenfoque, extensión, color y la palabra clave inset para sombras internas. Es una herramienta poderosa para el diseño de interfaces modernas.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="shadowBox">Sombra</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Manipulación de Clases CSS -->
+        <section class="category">
+            <h2>Manipulación de Clases CSS</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>element.classList.add()</h4>
+                    <p>Añade una o múltiples clases CSS a un elemento sin afectar las clases existentes. Este método es preferible sobre className cuando se necesita agregar clases adicionales porque no sobrescribe las clases preexistentes. Puede aceptar múltiples clases como argumentos separados por comas, haciendo que la adición de varias clases sea eficiente.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="classAddExample">Añadir Clase</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.classList.remove()</h4>
+                    <p>Elimina una o múltiples clases CSS de un elemento, manteniendo intactas las demás clases aplicadas. Al igual que add(), puede aceptar múltiples clases como argumentos para remover varias clases simultáneamente. Es especialmente útil para desactivar estados visuales o temas aplicados dinámicamente.</p>
+                    <div class="visual-example">
+                        <div class="example-element active-state" id="classRemoveExample">Remover Clase</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.classList.toggle()</h4>
+                    <p>Alterna la presencia de una clase CSS en un elemento - la añade si no está presente y la remueve si ya existe. Opcionalmente puede aceptar un segundo parámetro booleano que fuerza la adición (true) o remoción (false) de la clase. Es ideal para implementar funcionalidades de alternancia como mostrar/ocultar elementos.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="classToggleExample">Alternar Clase</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Manipulación de Contenido -->
+        <section class="category">
+            <h2>Manipulación de Contenido</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>element.innerHTML</h4>
+                    <p>Obtiene o establece la sintaxis HTML contenida dentro de un elemento. Al establecer esta propiedad, el HTML proporcionado es analizado e insertado como elementos DOM reales. Es muy potente pero debe usarse con cuidado para evitar vulnerabilidades XSS cuando se inserta contenido no confiable. Ideal para actualizar secciones completas de la interfaz.</p>
+                    <div class="visual-example">
+                        <div id="innerHTMLExample" class="example-text">Contenido original</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.textContent</h4>
+                    <p>Obtiene o establece el contenido de texto de un elemento y todos sus descendientes, ignorando cualquier etiqueta HTML. A diferencia de innerHTML, textContent es más seguro ya que trata el contenido como texto plano, evitando problemas de seguridad. También es más eficiente cuando solo se necesita manipular texto sin formato HTML.</p>
+                    <div class="visual-example">
+                        <div id="textContentExample" class="example-text">Texto original</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>document.createElement()</h4>
+                    <p>Crea un nuevo elemento HTML especificado por tagName. El elemento creado existe en memoria pero no forma parte del documento DOM hasta que se inserta usando métodos como appendChild o insertBefore. Este método es fundamental para la generación dinámica de contenido y construcción de interfaces complejas.</p>
+                    <div class="visual-example" id="createElementExample">
+                        <!-- Elemento creado dinámicamente -->
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>parent.appendChild()</h4>
+                    <p>Añade un nodo al final de la lista de hijos de un nodo padre especificado. Si el nodo ya existe en el documento, es movido de su posición actual a la nueva posición. Este método es esencial para construir estructuras DOM dinámicamente y actualizar la interfaz de usuario con nuevo contenido generado programáticamente.</p>
+                    <div class="visual-example" id="appendChildExample">
+                        <div class="example-element">Elemento existente</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.remove()</h4>
+                    <p>Elimina el elemento del árbol DOM, desconectándolo completamente de su padre. Una vez removido, el elemento y todos sus descendientes dejan de ser parte del documento y pueden ser recolectados por el garbage collector si no hay otras referencias a ellos. Es la forma moderna y más simple de remover elementos.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="removeExample">Elemento a eliminar</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Eventos y Temporizadores -->
+        <section class="category">
+            <h2>Eventos y Temporizadores</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>addEventListener()</h4>
+                    <p>Registra un manejador de eventos para un tipo específico de evento en un elemento. A diferencia de las propiedades onevent, permite múltiples manejadores para el mismo evento y proporciona más control sobre la fase de propagación (captura o burbuja). Es el método estándar moderno para manejar eventos en JavaScript.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="eventExample">Evento</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>setTimeout()</h4>
+                    <p>Programa la ejecución de una función después de que transcurra un tiempo determinado en milisegundos. Retorna un ID que puede usarse con clearTimeout() para cancelar la ejecución programada. Es útil para retrasar acciones, crear timeouts o implementar comportamientos que deben ocurrir después de una pausa.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="timeoutExample">Timeout</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>setInterval()</h4>
+                    <p>Ejecuta repetidamente una función con un retardo fijo entre cada llamada. Al igual que setTimeout, retorna un ID que puede usarse con clearInterval() para detener la ejecución. Es ideal para crear animaciones, actualizaciones periódicas de datos o cualquier tarea que necesite repetirse a intervalos regulares.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="intervalExample">Intervalo</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Navegación y Animaciones -->
+        <section class="category">
+            <h2>Navegación y Animaciones</h2>
+            <div class="method-grid">
+                <div class="method-card">
+                    <h4>window.scrollTo()</h4>
+                    <p>Desplaza la ventana a unas coordenadas específicas en el documento o a un elemento particular. Puede aceptar un objeto de opciones para especificar un comportamiento de desplazamiento suave (smooth scrolling). Es esencial para crear experiencias de navegación fluidas, como enlaces a anclas o navegación entre secciones.</p>
+                    <div class="visual-example">
+                        <div style="height: 100px; overflow-y: scroll; width: 100%;">
+                            <div style="height: 300px; padding: 20px; background: linear-gradient(#f8f9fa, #e9ecef);">
+                                Contenido desplazable - scrollTo mueve a posición específica
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.animate()</h4>
+                    <p>Método moderno para crear animaciones usando la Web Animations API. Permite definir animaciones complejas con keyframes y opciones de timing directamente desde JavaScript, sin necesidad de CSS. Retorna un objeto Animation que puede controlarse programáticamente. Es más potente y flexible que las transiciones CSS para animaciones avanzadas.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="animateExample">Animar</div>
+                    </div>
+                </div>
+                
+                <div class="method-card">
+                    <h4>element.getBoundingClientRect()</h4>
+                    <p>Retorna un objeto DOMRect que contiene información sobre el tamaño de un elemento y su posición relativa respecto a la viewport. Las propiedades incluyen coordenadas top, right, bottom, left, así como width y height. Es fundamental para cálculos de posicionamiento, detección de colisiones y animaciones basadas en scroll.</p>
+                    <div class="visual-example">
+                        <div class="example-element" id="rectExample">Posición</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Guía de referencia de JavaScript para manipulación del DOM - Métodos esenciales para desarrollo web</p>
+        </footer>
+    </div>
+    <script src = "MascotaVirtual.js"></script>
+</body>
+</html>

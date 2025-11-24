@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizando tus primeros elementos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+        <div class="logo"><span>Code</span><span class="span2">Craft</span></div>
+        <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="sechtml-1.html">HTML</a>
+                <a href="PaginaJavaScript.html">JavaScript</a>
+        </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="intro">
+            <h1>Estilizando tus primeros elementos</h1>
+            <p>Una introducción interactiva a las propiedades esenciales de CSS para dar vida a tus páginas web.</p>
+        </section>
+
+        <section class="que-es-css">
+            <h2>¿Qué es CSS?</h2>
+            <p>CSS, u Hojas de Estilo en Cascada, es el lenguaje que usamos para estilizar un documento HTML. CSS describe cómo se deben mostrar los elementos HTML en la pantalla, en papel o en otros medios. Piensa en HTML como el esqueleto de tu página y en CSS como la ropa y el maquillaje que le dan estilo y personalidad.</p>
+        </section>
+
+        <section class="sintaxis">
+            <h2>Sintaxis Básica</h2>
+            <p>Una regla CSS consta de un selector y un bloque de declaración. El selector apunta al elemento HTML que deseas estilizar. El bloque de declaración contiene una o más declaraciones separadas por punto y coma. Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos.</p>
+            <div class="code-example">
+                <pre>
+p {
+    color: blue; /* Esto es un comentario */
+    font-size: 16px;
+}
+                </pre>
+            </div>
+        </section>
+
+        <section class="propiedades"><!--AQUI DEBES INICIAR MAYELIS-->
+            <h2>Propiedades Fundamentales</h2>
+            <p>A continuación, exploraremos algunas de las propiedades más comunes. Usa el panel interactivo de la derecha para experimentar con ellas y ver los cambios en tiempo real. ¡La mejor forma de aprender es haciendo!</p>
+            <p>Las propiedades <code>color</code> y <code>background-color</code> te permiten controlar el color del texto y el fondo de un elemento, respectivamente. Experimenta con ellas en la pestaña "Color".</p>
+
+            <h2>1.	Background-image</h2><!--Copias desde aqui....-->
+            <p>Permite asignar una o varias imágenes como el fondo de un elemento. Esto añade profundidad, textura o una identidad visual específica a secciones completas de contenido. Su propósito esencial es determinar la imagen que servirá como capa de fondo, cubriendo completamente el área de contenido y el relleno (padding) del elemento. background-image acepta rutas locales, URLs externas o imágenes generadas por CSS (como degradados).</p>
+        <p><strong>Sintaxis: background-image: none | url() | linear-gradient() | ... ;</strong></p>
+        <p>Ejemplo: Establecer imagen de fondo de una página</p>
+        <pre class="code-example">
+            body {
+  background-image: url("paper.gif");
+}
+        </pre><!--...hasta aqui-->
+        <h2>2. Background-size</h2><!--Copias desde aqui....-->
+<p>La propiedad <code>background-size</code> especifica el tamaño de las imágenes de fondo. Acepta valores en píxeles, porcentajes o palabras clave como <em>cover</em> (para garantizar que la imagen cubra todo el elemento) y <em>contain</em> (para ajustar la imagen dentro del elemento), lo que permite diseños flexibles y adaptables.</p>
+<p><strong>Sintaxis: background-size: auto | cover | contain | width height ;</strong></p>
+<p>Ejemplo: Establecer tamaño de una imagen de fondo</p>
+<pre class="code-example">
+body {
+    background-image: url("Url/Imagen.com");
+    background-size: 400px 450px;
+    background-repeat: no-repeat;
+}
+</pre><!--...hasta aqui-->
+
+<h2>3. Background-position</h2><!--Copias desde aqui....-->
+<p>La propiedad <code>background-position</code> en CSS se utiliza para definir la posición de la imagen de fondo dentro del contenedor del elemento. Su propósito esencial es determinar desde qué punto del contenedor se mostrará la imagen de fondo, permitiendo controlar exactamente dónde se alinea la imagen y cómo se desplaza respecto al contenedor.</p>
+<p><strong>Sintaxis: background-position: left | center | right | x y ;</strong></p>
+<p>Ejemplo: Posicionar una imagen de fondo en el centro</p>
+<pre class="code-example">
+section {
+    background-image: url("paisaje.jpg");
+    background-position: center center;
+}
+</pre>
+<p>En este ejemplo, la imagen <code>paisaje.jpg</code> se alinea de forma que su centro coincida con el centro del contenedor.</p><!--...hasta aqui-->
+        <!--Pegas aquí dentro y modificas con la siguiente propiedad-->
+        <!--No te salgas de este section-->
+    <h2>4. Border Width</h2>
+    <p>La propiedad border-width establece el ancho (grosor) de los cuatro bordes del elemento (superior, derecho, inferior e izquierdo). Su propósito esencial es determinar cuán prominente será la línea que separa o enmarca el contenido respecto al resto del diseño visual. El grosor puede indicarse mediante valores absolutos (como píxeles, em, rem, etc.) o mediante palabras clave (thin, medium, thick). Esta propiedad, por sí sola, no mostrará borde alguno si no se ha definido previamente border-style, pues si no hay estilo de borde no habrá dibujo visible.</p>
+
+    <p><strong>Sintaxis: border-width: thin | medium | thick | length ;</strong></p>
+
+    <p><strong>Ejemplo:</strong><br>Aplicar un borde de grosor de 5 píxeles alrededor de un elemento:</p>
+
+<pre class="code-example">
+div {
+  border-style: solid;
+  border-width: 5px;
+}
+</pre>
+
+    <h2>5. Border Color</h2>
+    <p>La propiedad border-color permite establecer el color de los bordes de un elemento. Su propósito esencial es definir qué tono tendrá la línea que enmarca el contenido del elemento, y permite ajustar visualmente esa “barrera” o “marco” que separa el contenido del resto de la interfaz. Esta propiedad forma parte del modelo de diseño de caja (box model) y se emplea comúnmente para enfatizar, delimitar o decorar secciones, botones, cajas, etc.</p>
+
+    <p>La propiedad acepta valores de color (nombres de color, valores HEX, RGB, HSL, con o sin canal alfa) y puede aplicarse de forma unificada a los cuatro lados del elemento o de modo independiente para cada lado (arriba, derecha, abajo, izquierda).</p>
+
+    <p><strong>Sintaxis: border-color: color | transparent | initial | inherit ;</strong></p>
+
+    <p>Ejemplo:</p>
+<pre class="code-example">
+div {
+  border-style: solid;
+  border-color: #3498db;
+}
+</pre>
+
+
+    <h2>6. block-size</h2>
+    <p>La propiedad especifica el tamaño de un elemento en la dirección del bloque. En el contexto de CSS, esto generalmente se refiere a la altura de un elemento cuando el modo de escritura es horizontal (como de izquierda a derecha), o al ancho de un elemento cuando el modo de escritura es vertical (como de arriba abajo). </p>
+
+    <p><strong>Sintaxis: block-size: length | auto | fit-content | max-content | min-content ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div {
+  block-size: 200px;
+}
+</pre>
+
+    <h2>7. Bottom</h2>
+    <p>La propiedad bottom afecta a la posición vertical de un elemento posicionado. Esta propiedad no tiene ningún efecto sobre los elementos no posicionados.</p>
+
+    <ul>
+        <li>Sí position: absolute; o position: fixed;, la propiedad bottom establece el borde inferior de un elemento en una unidad por encima/por debajo del borde inferior de su antecesor posicionado más cercano.</li>
+        <li>Sí position: relative;, la propiedad bottom hace que el borde inferior del elemento se mueva por encima/por debajo de su posición normal.</li>
+        <li>Sí position: sticky;, la propiedad bottom se comporta como si su posición fuera relativa cuando el elemento está dentro de la ventana gráfica, y como si su posición fuera fija cuando está fuera.</li>
+        <li>Sí position: static;, la propiedad bottom no tiene ningún efecto.</li>
+    </ul>
+
+    <p><strong>Sintaxis: bottom: auto | length | percentage ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div.absolute {
+  position: absolute;
+  bottom: 10px;
+  width: 50%;
+  border: 3px solid #8AC007;
+}
+</pre>
+
+
+    <h2>8. column-width</h2>
+    <p>La propiedad column-width define el ancho de la columna.</p>
+
+    <p>El número de columnas corresponderá al mínimo necesario para visualizar la totalidad del contenido del elemento.</p>
+
+    <p>column-width constituye una propiedad flexible. Considere column-width como una sugerencia de ancho mínimo para el navegador. Cuando el navegador no pueda acomodar al menos dos columnas con el ancho especificado, las columnas cesarán su división y se consolidarán en una sola.</p>
+
+    <p><strong>Sintaxis: column-width: auto | length ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+Especifica que el ancho de columna debe ser de 100px:
+
+div {
+  column-width: 100px;
+}
+</pre>
+
+
+    <h2>9. column-count</h2>
+    <p>Esta propiedad determina la cantidad de columnas en las que se debe fraccionar un elemento, permitiendo crear un diseño de cuadrícula o de múltiples columnas dentro de un contenedor, similar al formato de un periódico o revista. Al especificar un número entero, el contenido del elemento se distribuirá uniformemente entre ese número de columnas, lo que es útil para mejorar la legibilidad y la organización visual del texto en pantallas amplias.</p>
+
+    <p><strong>Sintaxis: column-count: number | auto ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+Divide el texto en el elemento &lt;div&gt; en tres columnas:
+
+div {
+  column-count: 3;
+}
+</pre>
+
+
+    <h2>10. align-content</h2>
+    <p>La propiedad align-content controla la distribución del espacio entre líneas o grupos de elementos hijos dentro de un contenedor cuando este contenedor tiene varias líneas de contenido (por ejemplo, un contenedor flex con flex-wrap: wrap o un contenedor grid). Su propósito esencial es determinar cómo se colocan esas “líneas” de elementos en el eje transversal (cross-axis) del contenedor, es decir, el eje perpendicular al principal.</p>
+
+    <p><strong>Sintaxis: align-content: flex-start | flex-end | center | space-between | space-around | stretch ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+Empaque las líneas hacia el centro del contenedor flexible:
+div {
+  width: 70px;
+  height: 300px;
+  border: 1px solid #c3c3c3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+</pre>
+
+
+    <h2>11. aspect-ratio</h2>
+    <p>La propiedad aspect-ratio posibilita la definición de la proporción entre la anchura y la altura de un elemento, lo cual es fundamental para el diseño responsivo y el mantenimiento de la coherencia visual.</p>
+
+    <p>En caso de establecerse las propiedades aspect-ratio y width, la altura se ajustará automáticamente a la relación de aspecto predefinida. De forma similar, si se establecen aspect-ratio y height, la anchura se calculará para mantener dicha proporción.</p>
+
+    <p><strong>Sintaxis: aspect-ratio: auto | width / height ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+
+div {
+  background-color: red;
+  width: 100px;
+  aspect-ratio: 3/2;
+}
+</pre>
+
+
+    <h2>12. Box Shadow</h2>
+    <p>La propiedad box-shadow permite añadir una o varias sombras alrededor (o dentro) de un elemento. Su finalidad primordial es generar efectos de profundidad visual, elevación, o dimensión en componentes de la interfaz (como tarjetas, botones, paneles), ayudando a que se destaquen o parezcan “flotantes” respecto al fondo.</p>
+
+    <p><strong>Sintaxis: box-shadow: none | h-offset v-offset blur spread color inset ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+#Etiqueta1 {
+  box-shadow: 5px 10px;
+}
+
+#Etiqueta2 {
+  box-shadow: 5px 10px #888888;
+}
+</pre>
+
+
+    <h2>13. box-sizing</h2>
+    <p>La propiedad box-sizing determina cómo se calcula el ancho y el alto de un elemento: si deben considerarse (o no) los bordes (border) y el relleno interno (padding). Su propósito esencial es proporcionar un control explícito sobre el modelo de caja (box model) del elemento, permitiendo que el desarrollador especifique si el valor de width y height declarado se aplica únicamente al contenido o abarca también el padding y el border.</p>
+
+    <p><strong>Sintaxis: box-sizing: content-box | border-box ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+Incluye el relleno y el borde en el ancho y alto totales del elemento:
+
+#example1 {
+  box-sizing: content-box;  
+  width: 300px;
+  height: 100px;
+  padding: 30px;  
+  border: 10px solid blue;
+}
+</pre>
+
+
+    <h2>14. Filter</h2>
+    <p>La propiedad CSS filter aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se utilizan habitualmente para ajustar la representación de imágenes, fondos y bordes.</p>
+
+    <p>Hay varias funciones disponibles, como blur() y contrast(), que le ayudarán a conseguir efectos predefinidos.</p>
+
+    <p><strong>Sintaxis: filter: none | blur() | brightness() | contrast() | grayscale() | ... ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+
+img {
+  border: 5px solid yellow;
+}
+/* Aplique un 40 % de gris a la segunda imagen y desenfoque 5 píxeles. */
+img:nth-of-type(2) {
+  filter: grayscale(0.4) blur(5px);
+}
+</pre>
+
+
+    <h2>15. writing-mode</h2>
+    <p>La propiedad writing-mode especifica cómo se disponen las líneas de texto dentro de un bloque: si se organizan de forma horizontal o vertical, y en qué dirección progresa el flujo de bloques. Su propósito esencial es adaptar la orientación del texto (y el flujo de los elementos de bloque en el contenedor) para soportar distintos sistemas de escritura, idiomas o efectos de diseño.</p>
+
+    <p><strong>Sintaxis: writing-mode: horizontal-tb | vertical-rl | vertical-lr ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p.test1 {
+  writing-mode: horizontal-tb;
+}
+
+p.test2 {
+  writing-mode: vertical-rl;
+}
+
+span.test2 {
+  writing-mode: vertical-rl;
+}
+</pre>
+
+
+    <h2>16. max-height</h2>
+    <p>La propiedad max-height en CSS se utiliza para establecer la altura máxima de un elemento. Si el contenido del elemento es mayor que la altura máxima especificada, el contenido se desbordará; de lo contrario, no tendrá ningún efecto. Si el contenido del elemento es menor, no tendrá ningún efecto. El valor de la propiedad height puede ser anulado por la propiedad max-height.</p>
+
+    <p><strong>Sintaxis: max-height: none | length | percentage ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+            max-height: 35px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+</pre>
+
+
+    <h2>17. max-width</h2>
+    <p>La propiedad max-width en CSS define el ancho máximo que puede ocupar un elemento, asegurando que no supere un ancho especificado. Esta propiedad desempeña un papel crucial en el diseño responsivo, ya que permite que el contenido se ajuste dentro de un límite definido. Ayuda a crear diseños flexibles que se ven muy bien en pantallas de distintos tamaños.</p>
+
+    <p><strong>Sintaxis: max-height: none | length | percentage ;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+            max-width: 110px;
+            color: white;
+            background-color: green;
+        }
+</pre>
+
+
+    <h2>18. min-height</h2>
+    <p>La propiedad min-height en CSS se utiliza para establecer la altura mínima de un elemento. La propiedad min-height se utiliza cuando el contenido del elemento es menor que la altura mínima y, si el contenido es mayor que la altura mínima, no tiene ningún efecto. Esta propiedad garantiza que el valor de la propiedad height no sea inferior al valor de altura especificado del elemento en cuestión. </p>
+
+    <p><strong>Sintaxis:
+min-height: length|initial|inherit;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+            min-height: 10px;
+            border: 1px solid black;
+        }
+</pre>
+
+
+    <h2>19. min-width</h2>
+    <p>La propiedad min-width en CSS se utiliza para definir el ancho mínimo de un elemento. El valor del ancho no puede ser inferior al valor de min-width. Si el contenido especificado dentro del elemento es más pequeño, min-width mantiene el ancho mínimo especificado. </p>
+
+    <p><strong>Sintaxis:
+min-width: length|initial|inherit;</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+            min-width: 300px;
+            display: inline-block;
+            color: white;
+            background-color: green;
+        }
+</pre>
+
+
+    <h2>20. line-height</h2>
+    <p>La propiedad CSS line-height establece la altura (también llamada interlineado) entre las líneas de texto en un elemento de nivel de bloque, como un párrafo.</p>
+
+    <p><strong>Sintaxis:
+line-height: 	length | percentage | number | normal | initial | inherit</strong></p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+    line-height: 1.5;
+}
+div {
+    line-height: 300%;
+}
+</pre>
+
+<!-- Copias desde aquí... -->
+<h2>21. Opacity</h2>
+<p>Controla el nivel de transparencia de un elemento completo, incluyendo su contenido e imágenes. Valores cercanos a 0 lo hacen casi invisible, mientras que 1 significa opacidad total. Es ampliamente usado en efectos visuales y transiciones.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img {
+  opacity: 0.6;
+}
+</pre>
+
+<h2>22. Visibility</h2>
+<p>Determina si un elemento es visible o está oculto sin removerlo del flujo del documento. A diferencia de display: none, el espacio que ocupa permanece reservado.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+  visibility: hidden;
+}
+</pre>
+
+<h2>23. Cursor</h2>
+<p>Establece la apariencia del puntero del mouse cuando se coloca encima del elemento. Es útil para indicar interacción (por ejemplo, un botón o enlace).</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+button {
+  cursor: pointer;
+}
+</pre>
+
+<h2>24. Text-align</h2>
+<p>Define cómo se alinea horizontalmente el texto dentro de un elemento de bloque. Acepta valores como left, center, right y justify.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+h1 {
+  text-align: center;
+}
+</pre>
+
+<h2>25. Text-transform</h2>
+<p>Controla la capitalización del texto, permitiendo convertirlo a mayúsculas, minúsculas o capitalizar todas las palabras.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+  text-transform: uppercase;
+}
+</pre>
+
+<h2>26. Text-shadow</h2>
+<p>Agrega sombras a los textos, mejorando la estética y legibilidad sobre fondos complejos.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+h2 {
+  text-shadow: 2px 2px 4px black;
+}
+</pre>
+
+<h2>27. Letter-spacing</h2>
+<p>Controla el espacio entre caracteres. Útil para mejorar la legibilidad o estilizar títulos.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+h1 {
+  letter-spacing: 3px;
+}
+</pre>
+
+<h2>28. Word-spacing</h2>
+<p>Modifica el espacio entre palabras completas.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p {
+  word-spacing: 8px;
+}
+</pre>
+
+<h2>29. White-space</h2>
+<p>Define cómo se procesan los espacios en blanco dentro del texto, permitiendo evitar saltos de línea o preservar el formato exacto del contenido.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+code {
+  white-space: pre;
+}
+</pre>
+
+<h2>30. Object-fit</h2>
+<p>Controla cómo una imagen o video ajusta su contenido dentro de un contenedor con dimensiones fijas, sin deformarse.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+</pre>
+
+<h2>31. Object-position</h2>
+<p>Permite definir qué parte de la imagen se mantiene visible al recortarse con object-fit.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img {
+  object-position: top center;
+}
+</pre>
+
+<h2>32. Outline</h2>
+<p>Dibuja un contorno exterior alrededor del elemento, sin afectar el diseño del modelo de caja. Se usa frecuentemente para accesibilidad (ej. foco del teclado).</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+button:focus {
+  outline: 3px solid blue;
+}
+</pre>
+
+<h2>33. Resize</h2>
+<p>Permite al usuario redimensionar elementos como cajas de texto, controlando la dirección del cambio de tamaño.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+textarea {
+  resize: vertical;
+}
+</pre>
+
+<h2>34. Overflow-x</h2>
+<p>Controla el comportamiento del desbordamiento horizontal de un elemento, permitiendo scroll o corte del contenido.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div {
+  overflow-x: scroll;
+}
+</pre>
+
+<h2>35. Overflow-y</h2>
+<p>Controla el desbordamiento vertical; útil para paneles o contenedores con mucho contenido.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div {
+  overflow-y: auto;
+}
+</pre>
+
+<h2>36. Flex-direction</h2>
+<p>Define la dirección principal en un contenedor flex, pudiendo ser horizontal o vertical.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.container {
+  display: flex;
+  flex-direction: column;
+}
+</pre>
+
+<h2>37. Flex-wrap</h2>
+<p>Determina si los elementos flexibles deben ajustarse en varias líneas cuando no caben en una sola.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+</pre>
+
+<h2>38. Order</h2>
+<p>Permite cambiar el orden visual de los elementos dentro de un contenedor flex sin modificar el HTML.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.item {
+  order: 2;
+}
+</pre>
+
+<h2>39. Animation</h2>
+<p>Permite declarar una animación completa asociada a un elemento, definiendo nombre, duración, repetición y comportamiento.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div {
+  animation: girar 3s infinite;
+}
+</pre>
+
+<h2>40. Transform</h2>
+<p>Aplica transformaciones 2D o 3D como rotar, escalar, inclinar o trasladar un elemento.</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div:hover {
+  transform: scale(1.2);
+}
+</pre>
+
+<h2>41. Color</h2>
+<p>La propiedad "color" define el tono visual aplicado al texto dentro de un elemento. Su función es exclusivamente tipográfica, sin afectar fondo, bordes ni sombras. Es una herramienta clave para establecer jerarquías visuales, contraste y legibilidad. Puede utilizarse mediante valores HEX, RGB, HSL o palabras clave estandarizadas, lo cual ofrece alta flexibilidad para adaptar la estética al diseño general. Se puede usar en diferentes formatos como nombres de colores (red), valores HEX (#ff0000), RGB (rgb(255,0,0)), HSL (hsl(0, 100%, 50%)) y más. Esta propiedad es una de las más básicas y esenciales en CSS, ya que forma parte del diseño visual fundamental.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+p { 
+  color: #333333; 
+}
+</pre>
+
+<h2>42. Background-color</h2>
+<p>"background-color" determina la tonalidad aplicada al área interna completa del elemento, abarcando tanto el contenido como el espacio generado por el padding. Se utiliza para establecer bloques visuales, separar secciones, guiar la vista del usuario o generar contraste funcional y estético dentro de una interfaz.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+div { 
+  background-color: #f2f2f2; 
+}
+</pre>
+
+<h2>43. Font-size</h2>
+<p>Esta propiedad controla el tamaño perceptible de la fuente, influyendo directamente en la legibilidad, jerarquía y experiencia del usuario. Puede utilizar unidades relativas o absolutas, lo que permite diseños escalables, adaptativos o estrictamente controlados dependiendo del contexto y de la importancia del contenido. Puede medirse en píxeles, rem, em, porcentajes o unidades modernas como clamp() para tamaños fluidos.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+h1 { 
+  font-size: 2rem; 
+}
+</pre>
+
+<h2>44. Font-weight</h2>
+<p>Define qué tan gruesos o delgados se muestran los caracteres del texto. Sus valores pueden ir desde 100 (extra fino) hasta 900 (extra grueso), dependiendo de la tipografía. También acepta valores como bold, normal y lighter.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+strong { 
+  font-weight: 700; 
+}
+</pre>
+
+<h2>45. Margin</h2>
+<p>"margin" determina el espacio exterior que separa un elemento de los que están alrededor. Es esencial para construir estructuras limpias, consistentes y armoniosas, ya que controla la respiración visual entre módulos, tarjetas o secciones enteras del diseño. Puedes definir un margen general o márgenes individuales para cada lado. También permite valores negativos para crear superposiciones. Controlar correctamente los márgenes ayuda a estructurar un diseño limpio y ordenado.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+.card {  
+  margin: 20px; 
+}
+</pre>
+
+<h2>46. Padding</h2>
+<p>"padding" representa el espacio interior existente entre el contenido del elemento y su borde. Contribuye a mejorar la legibilidad, balancear el diseño y establecer proporciones claras dentro de componentes como botones, tarjetas y contenedores. A diferencia de margin, forma parte del tamaño total del elemento (modelo de caja). Es esencial para dar aire y mejorar la lectura dentro de tarjetas, botones y contenedores.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+.card {  
+  padding: 15px; 
+}
+</pre>
+
+<h2>47. Border</h2>
+<p>La propiedad "border" crea un contorno alrededor del elemento, definiendo grosor, estilo y color. Se usa para generar énfasis, delimitar áreas, reforzar la estructura visual o mejorar la experiencia del usuario mediante indicaciones sutiles de interacción.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+.box { 
+  border: 2px solid black; 
+}
+</pre>
+
+<h2>48. Border-radius</h2>
+<p>"border-radius" redondea las esquinas de los elementos, suavizando la apariencia general o creando formas circulares. Es ampliamente utilizado en diseños modernos, amigables y minimalistas, donde las líneas curvas generan una sensación más orgánica y accesible.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+.btn { 
+  border-radius: 12px; 
+}
+</pre>
+
+<h2>49. Width</h2>
+<p>Controla el ancho de un elemento, influenciando la forma en que el contenido se distribuye y adapta. Un diseño responsivo suele beneficiarse de valores relativos como porcentajes o unidades de vista, mientras que medidas fijas se emplean para layouts controlados.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+img { 
+  width: 300px; 
+}
+</pre>
+
+<h2>50. Height</h2>
+<p>Controla la altura del elemento. Así como width, puede usar unidades absolutas o relativas. Si no se establece, la altura se adapta al contenido. Es importante tener cuidado con alturas fijas para evitar cortar contenido.</p>
+
+<p>Ejemplo:</p>
+<pre class="code-example">
+img { 
+  height: 200px; 
+}
+</pre>
+
+<h2>51. text-indent</h2>
+<p>La propiedad text-indent especifica la cantidad de espacio horizontal que debe aplicarse antes de la primera línea de texto de un bloque. Su función es crear el efecto de sangría en el párrafo.</p>
+<p>Sintaxis: text-indent: length | percentage;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p { 
+  text-indent: 50px; 
+}
+</pre>
+
+<h2>52. word-spacing</h2>
+<p>word-spacing modifica el espacio entre palabras completas en un bloque de texto . Es útil para ajustes fines de tipografía.</p>
+<p>Sintaxis: word-spacing: normal | length;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p { 
+  word-spacing: 8px; 
+}
+</pre>
+
+<h2>53. list-style-position</h2>
+<p>Esta propiedad determina si el marcador de lista (viñeta o número) debe colocarse dentro o fuera del flujo del contenido.</p>
+<p>Sintaxis: list-style-position: inside | outside;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+ul { 
+  list-style-position: inside; 
+}
+</pre>
+
+<h2>54. tab-size</h2>
+<p>tab-size define el número de espacios que representa el carácter de tabulación (\t) al renderizar bloques de código.</p>
+<p>Sintaxis: tab-size: integer | length;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+pre { 
+  tab-size: 4; 
+}
+</pre>
+
+<h2>55. text-orientation</h2>
+<p>text-orientation establece la orientación de los caracteres dentro de una línea. Es útil cuando se utiliza el modo de escritura vertical.</p>
+<p>Sintaxis: text-orientation: mixed | upright | sideways | sideways-right | sideways-left;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div { 
+  text-orientation: sideways-right; 
+}
+</pre>
+
+<h2>56. white-space</h2>
+<p>white-space define cómo se gestionan los espacios en blanco (múltiples espacios, saltos de línea) dentro de un elemento, permitiendo preservar el formato exacto.</p>
+<p>Sintaxis: white-space: normal | pre | nowrap | pre-wrap | pre-line;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+code { 
+  white-space: pre; 
+}
+</pre>
+
+<h2>57. text-shadow</h2>
+<p>text-shadow añade una o más sombras a los textos, mejorando la estética o la legibilidad sobre fondos complejos.</p>
+<p>Sintaxis: text-shadow: none | h-shadow v-shadow blur color;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+h2 { 
+  text-shadow: 2px 2px 4px #000000; 
+}
+</pre>
+
+<h2>58. font-style</h2>
+<p>Esta propiedad define si la fuente del texto debe mostrarse normal, cursiva (italic) u oblicua (oblique).</p>
+<p>Sintaxis: font-style: normal | italic | oblique;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+em { 
+  font-style: italic; 
+}
+</pre>
+
+<h2>59. font-variant</h2>
+<p>font-variant permite que el texto se muestre con una variación tipográfica, como el uso de versales pequeñas (small-caps).</p>
+<p>Sintaxis: font-variant: normal | small-caps;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+h3 { 
+  font-variant: small-caps; 
+}
+</pre>
+
+<h2>60. line-height</h2>
+<p>line-height establece la altura de la línea (interlineado) entre las líneas de texto en un elemento, crucial para la legibilidad.</p>
+<p>Sintaxis: line-height: normal | number | length | percentage;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p { 
+  line-height: 1.5; 
+}
+</pre>
+
+<h2>61. text-align-last</h2>
+<p>text-align-last define cómo se alinea la última línea o la línea inmediatamente anterior a un salto de línea forzado dentro de un bloque.</p>
+<p>Sintaxis: text-align-last: auto | start | end | left | right | center | justify;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+p { 
+  text-align-last: center; 
+}
+</pre>
+
+<h2>62. visibility</h2>
+<p>visibility determina si un elemento es visible o está oculto (hidden) sin removerlo del flujo del documento (su espacio queda reservado).</p>
+<p>Sintaxis: visibility: visible | hidden | collapse;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.oculto { 
+  visibility: hidden; 
+}
+</pre>
+
+<h2>63. opacity</h2>
+<p>opacity controla el nivel de transparencia de un elemento completo. Los valores van de 0 (transparente) a 1 (opaco).</p>
+<p>Sintaxis: opacity: number (0.0 a 1.0);</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img { 
+  opacity: 0.6; 
+}
+</pre>
+
+<h2>64. object-fit</h2>
+<p>object-fit controla cómo una imagen o video ajusta su contenido dentro de un contenedor sin deformarse (ej. cover o contain).</p>
+<p>Sintaxis: object-fit: fill | contain | cover | none | scale-down;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img { 
+  object-fit: cover; 
+}
+</pre>
+
+<h2>65. clip-path</h2>
+<p>clip-path crea una forma de recorte que define qué parte de un elemento debe ser visible. Permite crear formas complejas.</p>
+<p>Sintaxis: clip-path: none | &lt;clip-source&gt; | &lt;basic-shape&gt; | &lt;geometry-box&gt;;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+div { 
+  clip-path: circle(50%); 
+}
+</pre>
+
+<h2>66. box-sizing</h2>
+<p>box-sizing determina cómo se calcula el ancho y alto del elemento: si deben incluir el padding y border (border-box) o no.</p>
+<p>Sintaxis: box-sizing: content-box | border-box;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+* { 
+  box-sizing: border-box; 
+}
+</pre>
+
+<h2>67. flex-wrap</h2>
+<p>flex-wrap define si los elementos flexibles deben ajustarse en varias líneas cuando no caben en una sola en el contenedor flex.</p>
+<p>Sintaxis: flex-wrap: nowrap | wrap | wrap-reverse;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.container { 
+  flex-wrap: wrap; 
+}
+</pre>
+
+<h2>68. gap</h2>
+<p>gap controla el espacio entre filas y columnas en contenedores grid y flex.</p>
+<p>Sintaxis: gap: &lt;row-gap&gt; &lt;column-gap&gt;;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.container { 
+  gap: 20px; 
+}
+</pre>
+
+<h2>69. box-shadow</h2>
+<p>box-shadow permite añadir una o varias sombras alrededor de un elemento (como tarjetas o botones) para generar un efecto de profundidad.</p>
+<p>Sintaxis: box-shadow: none | h-offset v-offset blur spread color inset;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+.card { 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+</pre>
+
+<h2>70 filter</h2>
+<p>filter aplica efectos gráficos como desenfoque (blur), escala de grises (grayscale) o brillo a un elemento.</p>
+<p>Sintaxis: filter: none | &lt;filter-function&gt; [&lt;filter-function&gt;]*;</p>
+<p>Ejemplo:</p>
+<pre class="code-example">
+img { 
+  filter: grayscale(50%); 
+}
+</pre>
+        <aside class="panel-interactivo">
+            <div class="tabs">
+                <button>Color</button>
+                <button>Tipografía</button>
+                <button>Caja</button>
+                <button>Flexbox</button>
+            </div>
+            <div class="panel">
+                <button class="btn-estilizar">¡Estílizame!</button>
+                <label>Color de Fondo</label>
+                <input type="text" value="#3B82F6">
+                <label>Color de Texto</label>
+                <input type="text" value="#FFFFFF">
+                <div class="codigo-css">
+                    <pre>
+                        
+.elemento-ejemplo {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+                    </pre>
+                </div>
+            </div>
+        </aside>
+
+        <div class="navigation-buttons">
+            <button class="btn-anterior">Anterior</button>
+            <button class="btn-continuar">Completar y Continuar</button>
+        </div>
+    </main>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 CodeCraft. Todos los derechos reservados.</p>
+        <nav class="footer-nav">
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Contacto</a>
+        </nav>
+        </div>
+    </footer>
+    <script src = "MascotaVirtual.js"></script>
+</body>
+</html>
