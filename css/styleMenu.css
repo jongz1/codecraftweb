@@ -1,0 +1,86 @@
+.panel-interactivo {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 300px;
+    background: #9cc7ca;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 9999;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 8px;
+    background: #eb9e56;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.tabs button:hover {
+    background: #d5d5d5;
+}
+
+/* === Panel Interno === */
+.panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-estilizar {
+    background: #3b82f6;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.btn-estilizar:hover {
+    background: #2563eb;
+}
+
+.panel label {
+    font-size: 14px;
+    color: #333;
+}
+
+.panel input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.codigo-css {
+    margin-top: 12px;
+    background: #1e1e1e;
+    color: #9cdcfe;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 14px;
+}
+
+.codigo-css pre {
+    margin: 0;
+    white-space: pre;
+}
+

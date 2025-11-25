@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guía Completa de JavaScript para Manipulación del DOM</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleeditor.css">
 <body>
-    <header class="header">
-        <div class="container">
-        <div class="logo"><span>Code</span><span class="span2">Craft</span></div>
-        <nav class="nav">
-                <a href="index.html">Inicio</a>
-                <a href="sechtml-1.html">HTML</a>
-                <a href="seccss.html">CSS</a>
-        </nav>
+    <!-- ===== HEADER ===== -->
+    <header class="header container">
+        <div class="brand">
+            <img src="imagen/cube.png" alt="logo" class="logo-img">
+            <div class="logo-box"></div>
+            CodeCraft
         </div>
+
+        <nav>
+            <div class="Lista de enlaces">
+            <a href="index.html">INICIO</a>
+            <a href="sechtml-1.html">HTML</a>
+            <a href="seccss.html">CSS</a>
+            </div>
+            <button class="cta">Iniciar sesión</button>
+        </nav> 
     </header>
 
     <main class="main-content">
@@ -25,6 +33,27 @@
             
             <p>La importancia de JavaScript radica en su capacidad para transformar páginas web estáticas en aplicaciones interactivas completas. Desde validar formularios y crear animaciones hasta desarrollar aplicaciones web complejas de una sola página (SPA), JavaScript se ha convertido en un pilar del desarrollo web moderno. Su versatilidad y compatibilidad con todos los navegadores principales lo han posicionado como uno de los lenguajes de programación más utilizados en el mundo.</p>
         </section>
+
+<!--Este es editor en linea-->
+        <section class="mini-editor">
+    <h2>Editor de JavaScript en Vivo</h2>
+
+    <div class="editor-contenedor">
+
+        
+        <textarea id="editorCodigo" spellcheck="false">
+// Escribe aquí tu código JavaScript
+console.log("Hola desde el editor JS");
+        </textarea>
+
+        <iframe id="editorSalida"></iframe>
+    </div>
+
+   
+    <button id="btnEjecutar">Ejecutar Código</button>
+</section>
+
+<script src="js/editor.js"></script>
         
         <section class="recommendations">
             <p>Al utilizar JavaScript para manipulación visual del DOM, es recomendable seguir las mejores prácticas de desarrollo. Esto incluye separar la lógica de presentación del contenido, utilizar selectores eficientes para mejorar el rendimiento, y manipular clases CSS en lugar de estilos en línea cuando sea posible para mantener un código más limpio y mantenible.</p>

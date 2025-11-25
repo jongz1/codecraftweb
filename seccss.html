@@ -5,17 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilizando tus primeros elementos</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleMenu.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-        <div class="logo"><span>Code</span><span class="span2">Craft</span></div>
-        <nav class="nav">
-                <a href="index.html">Inicio</a>
-                <a href="sechtml-1.html">HTML</a>
-                <a href="PaginaJavaScript.html">JavaScript</a>
-        </nav>
+    <!-- ===== Menú ===== -->
+    <header class="header container">
+        <div class="brand">
+            <img src="imagen/cube.png" alt="logo" class="logo-img">
+            <div class="logo-box"></div>
+            CodeCraft
         </div>
+
+        <nav>
+            <div class="Lista de enlaces">
+            <a href="index.html">INICIO</a>
+            <a href="sechtml-1.html">HTML</a>
+            <a href="PaginaJavaScript.html">JAVASCRIPT</a>
+            </div>
+            <button class="cta">Iniciar sesión</button>
+        </nav>
     </header>
 
     <main class="main-content">
@@ -841,35 +849,57 @@ img {
   filter: grayscale(50%); 
 }
 </pre>
-        <aside class="panel-interactivo">
-            <div class="tabs">
-                <button>Color</button>
-                <button>Tipografía</button>
-                <button>Caja</button>
-                <button>Flexbox</button>
-            </div>
-            <div class="panel">
-                <button class="btn-estilizar">¡Estílizame!</button>
-                <label>Color de Fondo</label>
-                <input type="text" value="#3B82F6">
-                <label>Color de Texto</label>
-                <input type="text" value="#FFFFFF">
-                <div class="codigo-css">
-                    <pre>
-                        
-.elemento-ejemplo {
-    background-color: #3b82f6;
-    color: #ffffff;
-}
-                    </pre>
-                </div>
-            </div>
-        </aside>
 
-        <div class="navigation-buttons">
-            <button class="btn-anterior">Anterior</button>
-            <button class="btn-continuar">Completar y Continuar</button>
+<aside class="panel-interactivo">
+            
+    <div class="tabs">
+        <button id="btnColor">Color</button>
+        <button id="btnTipografia">Tipografía</button>
+    </div>
+
+    <div class="panel">
+
+        <button class="btn-estilizar"> ¡Estílizame! </button>
+
+        <!-- opciones color -->
+        <div class="opciones-color">
+            <label>Color de Fondo</label>
+            <input type="text" value="#3B82F6">
+
+            <label>Color de Texto</label>
+            <input type="text" value="#FFFFFF">
         </div>
+
+        <!-- opciones texto -->
+        <div class="opciones-tipografia" style="display:none;">
+            <label>Tamaño de Fuente (px)</label>
+            <input type="number" value="20">
+
+            <label>Peso de Fuente</label>
+            <select>
+                <option value="normal">Normal</option>
+                <option value="bold">Negrita</option>
+            </select>
+
+            <label>Estilo de Fuente</label>
+            <select>
+                <option value="normal">Normal</option>
+                <option value="italic">Italic</option>
+            </select>
+        </div>
+
+        <div class="codigo-css">
+            <pre></pre>
+        </div>
+    </div>
+
+<div class="elemento-ejemplo" style="padding:20px; margin:20px; background:#3B82F6; color:white;">
+    Hola mundo
+</div>
+
+</aside>
+
+        
     </main>
     </section>
     <footer class="footer">
@@ -883,5 +913,6 @@ img {
         </div>
     </footer>
     <script src = "js/MascotaVirtual.js"></script>
+    <script src = "js/menuEditor.js"></script>
 </body>
 </html>

@@ -1,30 +1,54 @@
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    color: #1A1A1A;
-    background-color: #1E2A38;
+    background-color: #0f1723;
+    color: white;
+}
+/* ===== Menu de navegacion y eso ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-header{
-    background-color: #BEC6ED;
-    padding: 10px;
-    border-radius: 5px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav a {
-    color: #000;
-    margin-left: 25px;
-    font-size: 18px;
+.header .brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
 }
 
-.logo {
-    font-size: 32px;
-    color: #2631ff;
-    margin: 10px;
+.logo-img {
+    width: 32px;     
+    height: 32px;    
+    object-fit: contain; 
+    margin-right: 10px;  
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a,
+.header nav button {
+    background: none;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .main-content {
     margin: auto;
     width: 90%;
+    margin-right: 350px; 
 }
 
 .container {
@@ -41,7 +65,7 @@ header{
     width: 95%;
     margin: 15px auto;
     padding: 5px 15px;
-    background-color: #C7D3FF;
+    background-color: #02485afa;
     border-radius: 8px;
 }
 
@@ -49,9 +73,9 @@ header{
     width: 85%;
     margin: 15px auto;
     padding: 5px 15px;
-    background-color: #d6e67b;
+    background-color: #55e455;
     border-radius: 8px;
-    color: #ff2626;
+    color: #1f2922;
     font-weight: bold;
 }
 
@@ -59,12 +83,12 @@ header{
     width: 85%;
     margin: 15px auto;
     padding: 5px 15px;
-    background-color: #C7D3FF;
+    background-color: #02485afa;
     border-radius: 8px;
 }
 
 .code-example {
-    background: #f3f3ff;
+    background: #1c1c22;
     padding: 15px;
     border-radius: 10px;
     margin: 15px 0px;
@@ -72,7 +96,7 @@ header{
 
 section h2, h1 {
     font-size: 28px;
-    color: #2575FC;
+    color: #04f15f;
     padding-left: 10px;
 }
 
