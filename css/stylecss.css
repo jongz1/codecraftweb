@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f1723;
+    color: white;
+}
+/* ===== Menu de navegacion y eso ===== */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 32px;     
+    height: 32px;    
+    object-fit: contain; 
+    margin-right: 10px;  
+}
+
+.header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header nav a,
+.header nav button {
+    background: none;
+    border: none;
+    color: #c6c6c6;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.main-content {
+   margin-right: 350px;   
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro {
+    width: 95%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #02485afa;
+    border-radius: 8px;
+}
+
+.recommendations {
+    width: 85%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #55e455;
+    border-radius: 8px;
+    color: #1f2922;
+    font-weight: bold;
+}
+
+.conceptos, .elementos, .Comandos, .que-es-css, .sintaxis, .propiedades, .category{
+    width: 85%;
+    margin: 15px auto;
+    padding: 5px 15px;
+    background-color: #02485afa;
+    border-radius: 8px;
+}
+
+.code-example {
+    background: #1c1c22;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0px;
+}
+
+section h2, h1 {
+    font-size: 28px;
+    color: #04f15f;
+    padding-left: 10px;
+}
+
+span {
+    color: #008F5A;
+}
+
+.span2 {
+    color: #003F66;
+}
+
+.footer, .footer-nav a {
+    color: #FFFFFF;
+}
+
+footer {
+    color: #FFFFFF;
+    text-align: center;
+}
