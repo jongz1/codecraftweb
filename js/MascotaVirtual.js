@@ -192,7 +192,7 @@
             
             .motivational-pet-container .bubble {
                 position: absolute;
-                background-color: white;
+                background-color: blue;
                 border-radius: 20px;
                 padding: 15px;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
