@@ -55,6 +55,35 @@ console.log("Hola desde el editor JS");
 
 <script src="js/editor.js"></script>
 
+<section class="intro">
+    <h2>Ejemplo de código JavaScript</h2>
+
+    <div class="codebox">
+        <button class="copy-btn" data-code="code1">Copiar</button>
+        <pre id="code1" class="code-content">
+let nombre = "Pedro";
+console.log("Hola " + nombre);
+
+function verificarNumero(num) {
+    if (isNaN(num)) {
+        console.log("Eso no es un número válido.");
+        return "No es un número";
+    }
+
+    if (num % 2 === 0) {
+        console.log(num + " es par");
+        return "Es par";
+    } else {
+        console.log(num + " es impar");
+        return "Es impar";
+    }
+}
+
+let numero = 7;
+let resultado = verificarNumero(numero);
+        </pre>
+    </div>
+</section>
 
 </div>
         
@@ -294,6 +323,27 @@ console.log("Hola desde el editor JS");
             <p>Guía de referencia de JavaScript para manipulación del DOM - Métodos esenciales para desarrollo web</p>
         </footer>
     </div>
+
+    <script>
+// Script para copiar código
+document.addEventListener("click", function(e) {
+
+    if (e.target.classList.contains("copy-btn")) {
+
+        const codeId = e.target.getAttribute("data-code");
+        const content = document.getElementById(codeId).innerText;
+
+        navigator.clipboard.writeText(content)
+            .then(() => {
+                e.target.innerText = "Copiado!";
+                setTimeout(() => e.target.innerText = "Copiar", 1200);
+            })
+            .catch(err => console.error("Error al copiar: ", err));
+    }
+
+});
+</script>
+
     <script src = "js/MascotaVirtual.js"></script>
 </body>
 </html>
