@@ -26,7 +26,7 @@
         </nav>
     </header>
 
-    <main class="main-content">
+    <main class="main-content-css">
         <section class="intro">
             <h1>Estilizando tus primeros elementos</h1>
             <p>Una introducción interactiva a las propiedades esenciales de CSS para dar vida a tus páginas web.</p>
@@ -60,7 +60,7 @@ p {
         <p><strong>Sintaxis: background-image: none | url() | linear-gradient() | ... ;</strong></p>
         <p>Ejemplo: Establecer imagen de fondo de una página</p>
         <pre class="code-example">
-            body {
+body {
   background-image: url("paper.gif");
 }
         </pre><!--...hasta aqui-->
@@ -119,7 +119,7 @@ div {
 </pre>
 
 
-    <h2>6. block-size</h2>
+    <h2>6. Block-size</h2>
     <p>La propiedad especifica el tamaño de un elemento en la dirección del bloque. En el contexto de CSS, esto generalmente se refiere a la altura de un elemento cuando el modo de escritura es horizontal (como de izquierda a derecha), o al ancho de un elemento cuando el modo de escritura es vertical (como de arriba abajo). </p>
 
     <p><strong>Sintaxis: block-size: length | auto | fit-content | max-content | min-content ;</strong></p>
@@ -152,7 +152,7 @@ div.absolute {
 </pre>
 
 
-    <h2>8. column-width</h2>
+    <h2>8. Column-width</h2>
     <p>La propiedad column-width define el ancho de la columna.</p>
 
     <p>El número de columnas corresponderá al mínimo necesario para visualizar la totalidad del contenido del elemento.</p>
@@ -170,7 +170,7 @@ div {
 </pre>
 
 
-    <h2>9. column-count</h2>
+    <h2>9. Column-count</h2>
     <p>Esta propiedad determina la cantidad de columnas en las que se debe fraccionar un elemento, permitiendo crear un diseño de cuadrícula o de múltiples columnas dentro de un contenedor, similar al formato de un periódico o revista. Al especificar un número entero, el contenido del elemento se distribuirá uniformemente entre ese número de columnas, lo que es útil para mejorar la legibilidad y la organización visual del texto en pantallas amplias.</p>
 
     <p><strong>Sintaxis: column-count: number | auto ;</strong></p>
@@ -184,7 +184,7 @@ div {
 </pre>
 
 
-    <h2>10. align-content</h2>
+    <h2>10. Align-content</h2>
     <p>La propiedad align-content controla la distribución del espacio entre líneas o grupos de elementos hijos dentro de un contenedor cuando este contenedor tiene varias líneas de contenido (por ejemplo, un contenedor flex con flex-wrap: wrap o un contenedor grid). Su propósito esencial es determinar cómo se colocan esas “líneas” de elementos en el eje transversal (cross-axis) del contenedor, es decir, el eje perpendicular al principal.</p>
 
     <p><strong>Sintaxis: align-content: flex-start | flex-end | center | space-between | space-around | stretch ;</strong></p>
@@ -202,7 +202,7 @@ div {
 </pre>
 
 
-    <h2>11. aspect-ratio</h2>
+    <h2>11. Aspect-ratio</h2>
     <p>La propiedad aspect-ratio posibilita la definición de la proporción entre la anchura y la altura de un elemento, lo cual es fundamental para el diseño responsivo y el mantenimiento de la coherencia visual.</p>
 
     <p>En caso de establecerse las propiedades aspect-ratio y width, la altura se ajustará automáticamente a la relación de aspecto predefinida. De forma similar, si se establecen aspect-ratio y height, la anchura se calculará para mantener dicha proporción.</p>
@@ -235,7 +235,7 @@ div {
 </pre>
 
 
-    <h2>13. box-sizing</h2>
+    <h2>13. Box-sizing</h2>
     <p>La propiedad box-sizing determina cómo se calcula el ancho y el alto de un elemento: si deben considerarse (o no) los bordes (border) y el relleno interno (padding). Su propósito esencial es proporcionar un control explícito sobre el modelo de caja (box model) del elemento, permitiendo que el desarrollador especifique si el valor de width y height declarado se aplica únicamente al contenido o abarca también el padding y el border.</p>
 
     <p><strong>Sintaxis: box-sizing: content-box | border-box ;</strong></p>
@@ -272,7 +272,7 @@ img:nth-of-type(2) {
 </pre>
 
 
-    <h2>15. writing-mode</h2>
+    <h2>15. Writing-mode</h2>
     <p>La propiedad writing-mode especifica cómo se disponen las líneas de texto dentro de un bloque: si se organizan de forma horizontal o vertical, y en qué dirección progresa el flujo de bloques. Su propósito esencial es adaptar la orientación del texto (y el flujo de los elementos de bloque en el contenedor) para soportar distintos sistemas de escritura, idiomas o efectos de diseño.</p>
 
     <p><strong>Sintaxis: writing-mode: horizontal-tb | vertical-rl | vertical-lr ;</strong></p>
@@ -292,7 +292,7 @@ span.test2 {
 </pre>
 
 
-    <h2>16. max-height</h2>
+    <h2>16. Max-height</h2>
     <p>La propiedad max-height en CSS se utiliza para establecer la altura máxima de un elemento. Si el contenido del elemento es mayor que la altura máxima especificada, el contenido se desbordará; de lo contrario, no tendrá ningún efecto. Si el contenido del elemento es menor, no tendrá ningún efecto. El valor de la propiedad height puede ser anulado por la propiedad max-height.</p>
 
     <p><strong>Sintaxis: max-height: none | length | percentage ;</strong></p>
@@ -306,7 +306,7 @@ p {
 </pre>
 
 
-    <h2>17. max-width</h2>
+    <h2>17. Max-width</h2>
     <p>La propiedad max-width en CSS define el ancho máximo que puede ocupar un elemento, asegurando que no supere un ancho especificado. Esta propiedad desempeña un papel crucial en el diseño responsivo, ya que permite que el contenido se ajuste dentro de un límite definido. Ayuda a crear diseños flexibles que se ven muy bien en pantallas de distintos tamaños.</p>
 
     <p><strong>Sintaxis: max-height: none | length | percentage ;</strong></p>
@@ -320,7 +320,7 @@ p {
 </pre>
 
 
-    <h2>18. min-height</h2>
+    <h2>18. Min-height</h2>
     <p>La propiedad min-height en CSS se utiliza para establecer la altura mínima de un elemento. La propiedad min-height se utiliza cuando el contenido del elemento es menor que la altura mínima y, si el contenido es mayor que la altura mínima, no tiene ningún efecto. Esta propiedad garantiza que el valor de la propiedad height no sea inferior al valor de altura especificado del elemento en cuestión. </p>
 
     <p><strong>Sintaxis:
@@ -334,7 +334,7 @@ p {
 </pre>
 
 
-    <h2>19. min-width</h2>
+    <h2>19. Min-width</h2>
     <p>La propiedad min-width en CSS se utiliza para definir el ancho mínimo de un elemento. El valor del ancho no puede ser inferior al valor de min-width. Si el contenido especificado dentro del elemento es más pequeño, min-width mantiene el ancho mínimo especificado. </p>
 
     <p><strong>Sintaxis:
@@ -350,7 +350,7 @@ p {
 </pre>
 
 
-    <h2>20. line-height</h2>
+    <h2>20. Line-height</h2>
     <p>La propiedad CSS line-height establece la altura (también llamada interlineado) entre las líneas de texto en un elemento de nivel de bloque, como un párrafo.</p>
 
     <p><strong>Sintaxis:
@@ -650,7 +650,7 @@ img {
 }
 </pre>
 
-<h2>51. text-indent</h2>
+<h2>51. Text-indent</h2>
 <p>La propiedad text-indent especifica la cantidad de espacio horizontal que debe aplicarse antes de la primera línea de texto de un bloque. Su función es crear el efecto de sangría en el párrafo.</p>
 <p>Sintaxis: text-indent: length | percentage;</p>
 <p>Ejemplo:</p>
@@ -660,17 +660,7 @@ p {
 }
 </pre>
 
-<h2>52. word-spacing</h2>
-<p>word-spacing modifica el espacio entre palabras completas en un bloque de texto . Es útil para ajustes fines de tipografía.</p>
-<p>Sintaxis: word-spacing: normal | length;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-p { 
-  word-spacing: 8px; 
-}
-</pre>
-
-<h2>53. list-style-position</h2>
+<h2>52. List-style-position</h2>
 <p>Esta propiedad determina si el marcador de lista (viñeta o número) debe colocarse dentro o fuera del flujo del contenido.</p>
 <p>Sintaxis: list-style-position: inside | outside;</p>
 <p>Ejemplo:</p>
@@ -680,7 +670,7 @@ ul {
 }
 </pre>
 
-<h2>54. tab-size</h2>
+<h2>53. Tab-size</h2>
 <p>tab-size define el número de espacios que representa el carácter de tabulación (\t) al renderizar bloques de código.</p>
 <p>Sintaxis: tab-size: integer | length;</p>
 <p>Ejemplo:</p>
@@ -690,7 +680,7 @@ pre {
 }
 </pre>
 
-<h2>55. text-orientation</h2>
+<h2>54. Text-orientation</h2>
 <p>text-orientation establece la orientación de los caracteres dentro de una línea. Es útil cuando se utiliza el modo de escritura vertical.</p>
 <p>Sintaxis: text-orientation: mixed | upright | sideways | sideways-right | sideways-left;</p>
 <p>Ejemplo:</p>
@@ -700,27 +690,7 @@ div {
 }
 </pre>
 
-<h2>56. white-space</h2>
-<p>white-space define cómo se gestionan los espacios en blanco (múltiples espacios, saltos de línea) dentro de un elemento, permitiendo preservar el formato exacto.</p>
-<p>Sintaxis: white-space: normal | pre | nowrap | pre-wrap | pre-line;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-code { 
-  white-space: pre; 
-}
-</pre>
-
-<h2>57. text-shadow</h2>
-<p>text-shadow añade una o más sombras a los textos, mejorando la estética o la legibilidad sobre fondos complejos.</p>
-<p>Sintaxis: text-shadow: none | h-shadow v-shadow blur color;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-h2 { 
-  text-shadow: 2px 2px 4px #000000; 
-}
-</pre>
-
-<h2>58. font-style</h2>
+<h2>55. Font-style</h2>
 <p>Esta propiedad define si la fuente del texto debe mostrarse normal, cursiva (italic) u oblicua (oblique).</p>
 <p>Sintaxis: font-style: normal | italic | oblique;</p>
 <p>Ejemplo:</p>
@@ -730,7 +700,7 @@ em {
 }
 </pre>
 
-<h2>59. font-variant</h2>
+<h2>56. Font-variant</h2>
 <p>font-variant permite que el texto se muestre con una variación tipográfica, como el uso de versales pequeñas (small-caps).</p>
 <p>Sintaxis: font-variant: normal | small-caps;</p>
 <p>Ejemplo:</p>
@@ -740,7 +710,7 @@ h3 {
 }
 </pre>
 
-<h2>60. line-height</h2>
+<h2>57. Line-height</h2>
 <p>line-height establece la altura de la línea (interlineado) entre las líneas de texto en un elemento, crucial para la legibilidad.</p>
 <p>Sintaxis: line-height: normal | number | length | percentage;</p>
 <p>Ejemplo:</p>
@@ -750,7 +720,7 @@ p {
 }
 </pre>
 
-<h2>61. text-align-last</h2>
+<h2>58. Text-align-last</h2>
 <p>text-align-last define cómo se alinea la última línea o la línea inmediatamente anterior a un salto de línea forzado dentro de un bloque.</p>
 <p>Sintaxis: text-align-last: auto | start | end | left | right | center | justify;</p>
 <p>Ejemplo:</p>
@@ -760,37 +730,7 @@ p {
 }
 </pre>
 
-<h2>62. visibility</h2>
-<p>visibility determina si un elemento es visible o está oculto (hidden) sin removerlo del flujo del documento (su espacio queda reservado).</p>
-<p>Sintaxis: visibility: visible | hidden | collapse;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-.oculto { 
-  visibility: hidden; 
-}
-</pre>
-
-<h2>63. opacity</h2>
-<p>opacity controla el nivel de transparencia de un elemento completo. Los valores van de 0 (transparente) a 1 (opaco).</p>
-<p>Sintaxis: opacity: number (0.0 a 1.0);</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-img { 
-  opacity: 0.6; 
-}
-</pre>
-
-<h2>64. object-fit</h2>
-<p>object-fit controla cómo una imagen o video ajusta su contenido dentro de un contenedor sin deformarse (ej. cover o contain).</p>
-<p>Sintaxis: object-fit: fill | contain | cover | none | scale-down;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-img { 
-  object-fit: cover; 
-}
-</pre>
-
-<h2>65. clip-path</h2>
+<h2>59. Clip-path</h2>
 <p>clip-path crea una forma de recorte que define qué parte de un elemento debe ser visible. Permite crear formas complejas.</p>
 <p>Sintaxis: clip-path: none | &lt;clip-source&gt; | &lt;basic-shape&gt; | &lt;geometry-box&gt;;</p>
 <p>Ejemplo:</p>
@@ -800,17 +740,7 @@ div {
 }
 </pre>
 
-<h2>66. box-sizing</h2>
-<p>box-sizing determina cómo se calcula el ancho y alto del elemento: si deben incluir el padding y border (border-box) o no.</p>
-<p>Sintaxis: box-sizing: content-box | border-box;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-* { 
-  box-sizing: border-box; 
-}
-</pre>
-
-<h2>67. flex-wrap</h2>
+<h2>60. Flex-wrap</h2>
 <p>flex-wrap define si los elementos flexibles deben ajustarse en varias líneas cuando no caben en una sola en el contenedor flex.</p>
 <p>Sintaxis: flex-wrap: nowrap | wrap | wrap-reverse;</p>
 <p>Ejemplo:</p>
@@ -820,7 +750,7 @@ div {
 }
 </pre>
 
-<h2>68. gap</h2>
+<h2>61. Gap</h2>
 <p>gap controla el espacio entre filas y columnas en contenedores grid y flex.</p>
 <p>Sintaxis: gap: &lt;row-gap&gt; &lt;column-gap&gt;;</p>
 <p>Ejemplo:</p>
@@ -830,17 +760,7 @@ div {
 }
 </pre>
 
-<h2>69. box-shadow</h2>
-<p>box-shadow permite añadir una o varias sombras alrededor de un elemento (como tarjetas o botones) para generar un efecto de profundidad.</p>
-<p>Sintaxis: box-shadow: none | h-offset v-offset blur spread color inset;</p>
-<p>Ejemplo:</p>
-<pre class="code-example">
-.card { 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-}
-</pre>
-
-<h2>70 filter</h2>
+<h2>62 Filter</h2>
 <p>filter aplica efectos gráficos como desenfoque (blur), escala de grises (grayscale) o brillo a un elemento.</p>
 <p>Sintaxis: filter: none | &lt;filter-function&gt; [&lt;filter-function&gt;]*;</p>
 <p>Ejemplo:</p>
@@ -863,11 +783,14 @@ img {
 
         <!-- opciones color -->
         <div class="opciones-color">
+          <div>
             <label>Color de Fondo</label>
             <input type="text" value="#3B82F6">
-
+            </div>
+            <div>
             <label>Color de Texto</label>
             <input type="text" value="#FFFFFF">
+            </div>
         </div>
 
         <!-- opciones texto -->

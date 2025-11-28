@@ -131,3 +131,17 @@ footer {
 .verde {
     color: #00ff37;
 }
+
+.amarillo-crema {
+    color: #f8be72;
+}
+
+.amarillo {
+    color: #ffb01e;
+}
+
+.main-content-css {
+    margin: auto;
+    width: 70%;
+    margin-left: 350px; 
+}

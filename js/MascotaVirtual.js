@@ -267,7 +267,7 @@
             
             .pet-notification {
                 position: fixed;
-                bottom: 180px;
+                bottom: 300px;
                 right: 20px;
                 background: #4CAF50;
                 color: white;
